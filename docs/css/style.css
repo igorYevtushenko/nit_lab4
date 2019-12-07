@@ -1,0 +1,105 @@
+@charset "UTF-8";
+.container {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.brandForm > img {
+    margin: auto;
+    width: auto;
+    max-width: 230px;
+    max-height: 170px;
+}
+#product-content > img {
+    margin: auto;
+    width: auto;
+    max-width: 230px;
+    max-height: 170px;
+}
+.image-form{
+  margin-left: 40px;
+  width: auto;
+  max-width: 220px;
+  max-height: 320px;
+}
+
+.brands {
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.container.brandForm {
+    margin-right: 2%;
+    padding: 10%;
+}
+
+
+/*important однаковий для усіх розмір форми робить */
+.brandForm {
+    max-height: 500px;
+    position: relative;
+    margin: auto auto 20px auto;
+    text-align: center;
+}
+
+#modal-image {
+    max-height: 100px;
+}
+
+.content_header {
+    text-align: center;
+}
+
+/*important однаковий для усіх розмір форми робить */
+.brandForm > a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    height: 25px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.brandName {
+    padding-left: 30px;
+    margin-left: 30px;
+    /*size : 20px;*/
+}
+#cart_total {
+    font-size: 25px;
+}
+.price {
+    font-size: 30px;
+}
+.brandName {
+    max-width:100px ;
+}
+.last_price {
+    color: #918973;
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+
+.modal-content {
+    background-color: #FFF;
+}
+
+.modal-notify .modal-header {
+    border-radius: 3px 3px 0 0;
+}
+.modal-notify .modal-content {
+    border-radius: 3px;
+}
+
+
+.footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+}

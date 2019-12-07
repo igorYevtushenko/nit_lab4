@@ -1,0 +1,165 @@
+
+
+
+    <!DOCTYPE html>
+    <html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>IgorYevtushenko lab4</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    <!-- <div class="header">
+      <div class="row">
+        <div class="shop-logo my-0 mr-md-auto font-weight-bolt text-warning"><pre><h1>  K.I.R.P.I.C.H</h1></pre></div>
+        <div class="shop-cart">
+          Тег <input> является одним из разносторонних элементов формы
+          и позволяет создавать разные элементы интерфейса и обеспечить
+          взаимодействие с пользователем -->
+    <!-- change  -->
+    <!--          <input type="image" id="cart_button" src="./images/cart.png" alt="Cart" data-toggle="modal" data-target="#cartModal"></input>
+          </div>
+          <div class="shop-goods-counter" id="cart_number">0</div>
+        </div>
+      <div class="row">
+         <nav id="brandFilter" class="top_bottom top"></nav>
+      </div>
+      </div> -->
+
+    <div class="header">
+        <div class="header_top">
+            <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-warning border-bottom shadow-sm">
+                <h1 class="my-0 mr-md-auto font-weight-bolt text-danger">K.I.R.P.I.C.H</h1>
+                <div class="">
+                    <nav class="text-center text-uppercase" id="brandFilter" class="top_bottom top"></nav>
+                </div>
+                <div class="cart">
+                    <input class="text-lg-right" type="image" id="cart_button" src="./images/cart.png" data-toggle="modal"
+                           data-target="#cartModal" >
+                </div>
+                <div id="   font-weight-bolt text-danger">
+                    <h4 class="text-lg-right" id="countGoods"> 0 </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+    <!-- Modal window for info table -->
+    <div class="modal fade" id="productModalWindow">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="product-title" id="modalLabel"></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div id="product-content">
+                        <span class="empty"></span>
+                    </div>
+                    <div class="modal-footer prod"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- shopping card modal window -->
+    <div class="modal fade" id="cartModal" >
+        <div class="modal-dialog modal-dialog-centered mw-100">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title text-danger font-weight-bold text-md-center">K. O. R. Z. I. N. A </h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--            <span class="empty text-danger font-weight-bold text-md-center"><h3>P. U. S. T. O</h3></span>-->
+                <div class="container-for-cart">
+                    <div class="row">
+                        <!-- <div class="col-6">
+                            <div id="image-content" class="image-content">
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="operation-content" id="operation-content">
+
+                            </div>
+                            all operation with cart plus minus price and other
+                        </div>
+                        <div class="col-1">
+                            <div  id="close-content">
+                                <h4>X</h4>
+                            </div>
+                        </div> -->
+                        <div class="col-12">
+                            <div id="cart-content">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cart_total"></div>
+                <div class="modal-footer" id="cartTotal"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="buyModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered   " role="document">
+            <div class="modal-content">
+                <div class="modal-header text-center bg-warning">
+                    <h1 class="text-center">F. I. L. L</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="name" class="form-control validate col-11" placeholder="ENTER NAME">
+                    <br>
+                    <input type="text" id="surname" class="form-control validate col-11" placeholder="ENTER SURNAME">
+                    <br>
+                    <input type="email" id="phone"class="form-control validate col-11"  placeholder="ENTER PNONE">
+                    <br>
+                    <input type="email" id="email" class="form-control validate col-11" placeholder="ENTER EMAIL">
+                    <br><br>
+                </div>
+                <div class="modal-footer justify-content-center">
+
+                    <button type="button" class="btn btn-success" onclick="postCart(
+                        document.getElementById('name').value ,
+                        document.getElementById('surname').value,
+                        document.getElementById('phone').value,
+                        document.getElementById('email').value)">B.U.Y</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container"></div>
+
+
+    <footer>
+        <div class="dno-mogo-saita">
+            <pre class="text-center"><h4> D.E.L.A.L    <b class="text-warning">I G O R</b>   <b class="text-danger"> Y E V T U S H E N K O </b></h4></pre>
+            <h3 class="text-center">pokasho a student of KYIV-MOHYLA academy</h3>
+
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="./js/goods.js"></script>
+
+
+    </body>
+    </html>
